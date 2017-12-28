@@ -3,7 +3,7 @@
         <ui-header></ui-header>
         <main class="page-body">
             <div class="container">
-                UI
+                UI v1.0
                 <router-link to="/about">关于</router-link>
             </div>
         </main>
