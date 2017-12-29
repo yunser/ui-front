@@ -9,6 +9,16 @@ import storage from '@/util/storage'
 import './scss/main.scss'
 import ui from './components/index'
 
+import YunserUI from 'yunser-ui-vue'
+
+import 'yunser-ui-vue/dist/muse-ui.css'
+// import 'yunser-ui-vue/dist/theme-dark.css'
+// import 'yunser-ui-vue/dist/theme-light.css'
+import 'yunser-ui-vue/dist/theme-carbon.css'
+// import 'yunser-ui-vue/dist/theme-dark.css'
+
+Vue.use(YunserUI)
+
 Vue.config.productionTip = false
 
 Vue.prototype.$http = http

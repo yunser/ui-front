@@ -1,7 +1,7 @@
 <template>
     <header class="page-header">
         <div class="container">
-            <div>这是页面头部</div>
+            <!--<div>这是页面头部</div>-->
         </div>
     </header>
 </template>
