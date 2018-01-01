@@ -59,12 +59,11 @@
 
 <script>
 //    import dark from 'raw-loader!yunser-ui-vue/dist/theme-dark.css'
-    import dark from '!raw-loader!./theme-light.css'
+//    import dark from '!raw-loader!./theme-light.css'
 //    import teal from 'raw-loader!yunser-ui-vue/dist/theme-teal.css'
 
-    console.log('dark')
-    console.log(dark)
-
+//    console.log('dark')
+//    console.log(dark)
     export default {
         data () {
             return {
