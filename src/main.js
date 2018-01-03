@@ -11,7 +11,7 @@ import ui from './components/index'
 
 import YunserUI from 'yunser-ui-vue'
 
-import 'yunser-ui-vue/dist/muse-ui.css'
+import 'yunser-ui-vue/dist/yunser-ui.css'
 import 'yunser-ui-vue/dist/theme-dark.css'
 // import 'yunser-ui-vue/dist/theme-light.css'
 import 'yunser-ui-vue/dist/theme-carbon.css'

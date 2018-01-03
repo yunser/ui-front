@@ -9,8 +9,11 @@
                     </ui-appbar>
                 </header>
                 <div>
-                    <h2>网站快速成型工具</h2>
+                    <h1>网站快速成型工具</h1>
                     <div>Yunser UI，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库</div>
+                    <h2>介绍</h2>
+                    <div>Yunser UI 是一整套 UI 解决方案，我们参考了 Material Design 等 UI 设计规范，做出了一套跨平台的 UI 解决方案，
+                        为开发者、设计师和产品经理提供快速开发的工具。</div>
                     <a href="#">快速开始</a>
                     <br>
                     <a href="http://vue.ui.yunser.com" target="_blank">Yunser UI for Vue</a>
