@@ -4,11 +4,19 @@
         <main class="page-body">
             <div class="container">
                 <header>
-                    <ui-appbar title="Menu233">
+                    <ui-appbar title="UI">
                         <ui-icon-button icon="menu" slot="left"/>
                     </ui-appbar>
                 </header>
-                <button @click="changeTheme">修改2主题</button>
+                <div>
+                    <h2>网站快速成型工具</h2>
+                    <div>Yunser UI，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库</div>
+                    <a href="#">快速开始</a>
+                    <br>
+                    <a href="http://vue.ui.yunser.com" target="_blank">Yunser UI for Vue</a>
+                </div>
+
+                <button @click="changeTheme">修改主题</button>
                 UI v1.0
                 https://codepen.io/noeldelgado/pen/Dhqot
 
@@ -59,11 +67,11 @@
 
 <script>
 //    import dark from 'raw-loader!yunser-ui-vue/dist/theme-dark.css'
-    import dark from '!raw-loader!./theme-light.css'
+//    import dark from '!raw-loader!./theme-light.css'
 //    import teal from 'raw-loader!yunser-ui-vue/dist/theme-teal.css'
 
-    console.log('dark')
-    console.log(dark)
+//    console.log('dark')
+//    console.log(dark)
 
     export default {
         data () {
