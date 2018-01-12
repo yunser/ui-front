@@ -1,8 +1,8 @@
 <template>
     <header class="page-header">
-        <div class="container">
-            <!--<div>这是页面头部</div>-->
-        </div>
+        <ui-appbar :title="title">
+            <ui-icon-button icon="menu" slot="left"/>
+        </ui-appbar>
     </header>
 </template>
 
@@ -10,6 +10,12 @@
     export default {
         data() {
             return {
+            }
+        },
+        props: {
+            title: {
+                type: String,
+                default: ''
             }
         },
         mounted() {

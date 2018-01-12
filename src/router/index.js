@@ -3,6 +3,14 @@ import Router from 'vue-router'
 
 const Home = resolve => require(['@/views/Home'], resolve)
 const About = resolve => require(['@/views/About'], resolve)
+const Standard = resolve => require(['@/views/Standard'], resolve)
+const Web = resolve => require(['@/views/Web'], resolve)
+const Android = resolve => require(['@/views/Android'], resolve)
+const Ios = resolve => require(['@/views/Ios'], resolve)
+const Resource = resolve => require(['@/views/Resource'], resolve)
+const Prototype = resolve => require(['@/views/Prototype'], resolve)
+const Design = resolve => require(['@/views/Design'], resolve)
+const Css = resolve => require(['@/views/Css'], resolve)
 
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
@@ -26,6 +34,38 @@ let routes = [
         }
     },
     {
+        path: '/standard',
+        component: Standard
+    },
+    {
+        path: '/web',
+        component: Web
+    },
+    {
+        path: '/android',
+        component: Android
+    },
+    {
+        path: '/ios',
+        component: Ios
+    },
+    {
+        path: '/resource',
+        component: Resource
+    },
+    {
+        path: '/prototype',
+        component: Prototype
+    },
+    {
+        path: '/design',
+        component: Design
+    },
+    {
+        path: '/css',
+        component: Css
+    },
+    {
         path: '/404',
         component: Error404,
         meta: {
@@ -34,7 +74,7 @@ let routes = [
     },
     {
         path: '*',
-        redirect: '/404'
+        component: Error404
     }
 ]
 

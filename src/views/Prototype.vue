@@ -1,6 +1,6 @@
 <template>
-    <ui-page title="页面找不到了">
-        <div>404</div>
+    <ui-page title="原型">
+        <div>功能完善中...</div>
     </ui-page>
 </template>
 
@@ -8,7 +8,10 @@
     export default {
         data () {
             return {
+                version: ''
             }
+        },
+        mounted() {
         }
     }
 </script>

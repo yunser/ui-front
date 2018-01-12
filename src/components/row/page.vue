@@ -1,9 +1,7 @@
 <template>
-    <footer class="page-footer">
-        <div class="container">
-            <!--这是页脚-->
-        </div>
-    </footer>
+    <div class="ui-row">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
@@ -18,3 +16,9 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+    .ui-row {
+        margin-bottom: 16px;
+    }
+</style>
