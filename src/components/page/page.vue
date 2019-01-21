@@ -1,22 +1,27 @@
 <template>
-    <div class="ui-page" :class="['page-' + name]">
-        <ui-nav></ui-nav>
-        <div class="page-content">
-            <ui-header :title="title || page.title"></ui-header>
-            <main class="page-body">
-                <div class="page-container">
-                    <slot></slot>
-                </div>
-            </main>
-            <ui-footer></ui-footer>
+    <ui-page :title="title || page.title" ref="page" :page="page" :backable="backable">
+        <div slot="drawer">
+            <div class="header">
+                <img class="logo" src="/static/img/ui.svg">
+            </div>
+            <ui-list @itemClick="toggle()">
+                <ui-list-item title="首页" to="/">
+                    <ui-icon slot="left" value="grade"/>
+                </ui-list-item>
+                <ui-list-item title="关于" href="http://about.yunser.com/" target="_blank">
+                    <ui-icon slot="left" value="grade"/>
+                </ui-list-item>
+            </ui-list>
         </div>
-    </div>
+        <slot></slot>
+    </ui-page>
 </template>
 
 <script>
     export default {
         data() {
             return {
+                embed: false,
                 open: false,
                 docked: true
             }
@@ -44,43 +49,30 @@
             }
         },
         mounted() {
-            document.title = this.title || this.page.title
+            this.embed = this.$route.query.embed || false
         },
         methods: {
-            toggle(flag) {
-                this.open = !this.open
-                this.docked = !flag
+            toggle() {
+                console.log(this.$refs.page)
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .ui-page {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
-    .page-body {
-        min-height: 500px;
-    }
-    .container-main {
-        padding-top: 16px;
-    }
-    .page-content {
-        position: absolute;
-        top: 0;
-        left: 256px;
-        right: 0;
-        bottom: 0;
-    }
-    .page-container {
-        padding: 16px;
-        /*padding: 16px;*/
-    }
-    .admin-container {
-        padding: 16px;
-    }
+.header {
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.logo {
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+}
+.ui-position-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 </style>
