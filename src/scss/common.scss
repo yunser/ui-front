@@ -1,5 +1,9 @@
 // TODO
 .info-box {
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    right: 0;
     .mu-appbar {
         box-shadow: none;
         background-color: #fff;
@@ -18,4 +22,18 @@
     .body {
         padding: 0 16px;
     }
+}
+
+.ui-page-body {
+    -webkit-overflow-scrolling : touch;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+}
+.ui-message {
+  display: flex;
+  // max-width: 360px;
+  min-width: 40px;
+  height: auto;
 }

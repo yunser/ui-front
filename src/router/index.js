@@ -4,7 +4,6 @@ import Router from 'vue-router'
 const Home = resolve => require(['@/views/Home'], resolve)
 const Device = resolve => require(['@/views/Device'], resolve)
 const Screen = resolve => require(['@/views/Screen'], resolve)
-const About = resolve => require(['@/views/About'], resolve)
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
 Vue.use(Router)
@@ -23,20 +22,6 @@ let routes = [
     {
         path: '/screen',
         component: Screen
-    },
-    {
-        path: '/about',
-        component: About,
-        meta: {
-            title: '关于'
-        }
-    },
-    {
-        path: '/404',
-        component: Error404,
-        meta: {
-            title: '页面找不到了'
-        }
     },
     {
         path: '*',

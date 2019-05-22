@@ -1,18 +1,6 @@
 <template>
-    <my-page title="UI">
-        <div class="tool-list">
-            <div class="mu-paper list-item mu-paper-round mu-paper-1" 
-                v-for="app in apps">
-                <router-link class="link" :to="app.to">
-                    <img :src="app.icon" class="img">
-                    <div class="info">
-                        <h3 class="text">{{ app.name }}</h3>
-                        <div class="desc">{{ app.desc }}</div>
-                    </div>
-                    <i class="icon icon-heart"></i>
-                </router-link>
-            </div>
-        </div>
+    <my-page title="UI" :page="page">
+        <app-list :data="groups" />
     </my-page>
 </template>
 
@@ -20,20 +8,43 @@
     export default {
         data () {
             return {
-                apps: [
+                groups: [
                     {
-                        name: '屏幕尺寸大全',
-                        desc: '',
-                        icon: '/static/img/ui.svg',
-                        to: '/device'
-                    },
-                    {
-                        name: '设备信息查看',
-                        desc: '',
-                        icon: '/static/img/ui.svg',
-                        to: '/screen'
+                        // name: '基础工具',
+                        apps: [
+                            {
+                                name: '屏幕尺寸大全',
+                                desc: '',
+                                icon: '/static/img/ui.svg',
+                                to: '/device'
+                            },
+                            {
+                                name: '设备信息查看',
+                                desc: '',
+                                icon: '/static/img/ui.svg',
+                                to: '/screen'
+                            }
+                        ]
                     }
-                ]
+                ],
+                page: {
+                    menu: [
+                        {
+                            type: 'icon',
+                            icon: 'search',
+                            href: 'https://search.yunser.com?utm_source=ui',
+                            target: '_blank',
+                            title: '搜索'
+                        },
+                        {
+                            type: 'icon',
+                            icon: 'apps',
+                            href: 'https://app.yunser.com?utm_source=ui',
+                            target: '_blank',
+                            title: '应用'
+                        }
+                    ]
+                }
             }
         },
         computed: {
@@ -66,6 +77,7 @@
         padding: 8px;
         margin: 2px 16px 16px 2px;
         background-color: #fff;
+        cursor: pointer;
         //border: 1px solid #ccc;
         &:hover {
             background-color: #f9f9f9;
