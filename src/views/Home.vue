@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    /* eslint-disable */
     export default {
         data () {
             return {
@@ -23,7 +24,23 @@
                                 desc: '',
                                 icon: '/static/img/ui.svg',
                                 to: '/screen'
-                            }
+                            },
+                            {
+                                name: 'PSD 预览',
+                                desc: '',
+                                icon: '/static/img/ui.svg',
+                                to: 'xxx',
+                                href: 'https://psd.yunser.com/',
+                                target: '_blank',
+                            },
+                            {
+                                name: 'Sketch 预览',
+                                desc: '',
+                                icon: '/static/img/ui.svg',
+                                to: 'xxx',
+                                href: 'https://sketch.yunser.com/',
+                                target: '_blank',
+                            },
                         ]
                     }
                 ],

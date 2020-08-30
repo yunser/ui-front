@@ -1,13 +1,15 @@
 <template>
     <my-page title="设备信息查看">
-        <ui-article>
-            <table v-if="data">
-                <tr>
-                    <th>屏幕分辨率</th>
-                    <td>{{ data.rate }}</td>
-                </tr>
-            </table>
-        </ui-article>
+        <div class="common-container">
+            <ui-article>
+                <table v-if="data">
+                    <tr>
+                        <th>屏幕分辨率</th>
+                        <td>{{ data.rate }}</td>
+                    </tr>
+                </table>
+            </ui-article>
+        </div>
     </my-page>
 </template>
 
